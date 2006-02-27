@@ -1,0 +1,5 @@
+<use name=EventFilter/CSCTFRawToDigi>
+
+<bin name=testCSCTFRawToDigi file=testRunner.cpp,testCSCTFRawToDigi.cc>
+  <use name=cppunit>
+</bin>
