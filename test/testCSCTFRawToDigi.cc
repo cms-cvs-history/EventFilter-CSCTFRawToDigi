@@ -1,6 +1,6 @@
 /* \file testCSCTFRawToDigi.cc
  *
- *  $Date: 2006/02/27 03:12:02 $
+ *  $Date: 2006/02/27 10:32:02 $
  *  $Revision: 1.1 $
  *  \author L. Gray , ripped from testDaqSource
  */
@@ -77,7 +77,10 @@ void testCSCTFRawToDigi::testCreateDigis(){
     "                                      untracked int32 TBEndcap = 1      \n"
     "                                      untracked int32 TBSector = 5      \n"
     "                                      untracked string MappingFile = \"src/EventFilter/CSCTFRawToDigi/test/testmapping.map\" }\n"
-    "module csctfvalidator = CSCTFValidator { }\n"
+    "module csctfvalidator = CSCTFValidator { untracked int32 TBFedId = 4 \n"
+    "                                         untracked int32 TBEndcap = 1 \n"
+    "                                         untracked int32 TBSector = 5 \n"
+    "                                         untracked string MappingFile = \"src/EventFilter/CSCTFRawToDigi/test/testmapping.map\" }\n"
     "module poolout = PoolOutputModule {\n"
     "                            untracked string fileName = \"" + testfileLocation + "digis.root" +"\"} \n"
     "path p = {csctfunpacker,csctfvalidator}\n"
