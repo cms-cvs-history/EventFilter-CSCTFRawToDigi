@@ -8,7 +8,7 @@
 
   int main()
 {
-  CppUnit::TextUi::TestRunner runner;
+  CppUnit::TextTestRunner runner;
   CppUnit::TestFactoryRegistry& registry =
     CppUnit::TestFactoryRegistry::getRegistry();
 
