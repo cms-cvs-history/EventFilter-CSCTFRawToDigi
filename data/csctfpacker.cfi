@@ -6,8 +6,8 @@ module csctfpacker = CSCTFPacker {
   untracked bool   putBufferToEvent= true
 #  untracked InputTag lctProducer   = lctproducer:MPCSORTED
 #  untracked InputTag trackProducer = l1csctracks:
-  untracked InputTag lctProducer   = csctfunpacker:MuonCSCTFCorrelatedLCTDigi
-  untracked InputTag trackProducer = csctfunpacker:MuonL1CSCTrackCollection
+  untracked InputTag lctProducer   = csctfunpacker:
+  untracked InputTag trackProducer = csctfunpacker:
 
   untracked int32 LCTtimeOffset = -3
   untracked int32 TRKtimeOffset = 3
