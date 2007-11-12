@@ -11,9 +11,6 @@ module csctfpacker = CSCTFPacker {
   untracked InputTag lctProducer   = csctfunpacker:
   untracked InputTag trackProducer = csctfunpacker:
 
-  untracked int32 LCTtimeOffset = -3
-  untracked int32 TRKtimeOffset = 3
-
   using CSCCommonTrigger
 # the above "using" statement is equivalent to settings below:
 #   untracked int32 MinBX = 3
