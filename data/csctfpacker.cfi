@@ -8,8 +8,10 @@ module csctfpacker = CSCTFPacker {
   untracked bool   putBufferToEvent= true
 #  untracked InputTag lctProducer   = lctproducer:MPCSORTED
 #  untracked InputTag trackProducer = l1csctracks:
+#  untracked InputTag trackProducer = null:
   untracked InputTag lctProducer   = csctfunpacker:
   untracked InputTag trackProducer = csctfunpacker:
+  untracked InputTag statusProducer= csctfunpacker:
 
   using CSCCommonTrigger
 # the above "using" statement is equivalent to settings below:
