@@ -3,15 +3,15 @@ include "L1Trigger/CSCCommonTrigger/data/CSCCommonTrigger.cfi"
 module csctfpacker = CSCTFPacker {
   untracked bool   zeroSuppression = true
   untracked int32  nTBINs          = 7
-  untracked int32  activeSectors   = 32
+  untracked int32  activeSectors   = 0x0FFF
   untracked string outputFile      = ""
   untracked bool   putBufferToEvent= true
-#  untracked InputTag lctProducer   = lctproducer:MPCSORTED
-#  untracked InputTag trackProducer = l1csctracks:
+  untracked InputTag lctProducer   = l1CscTpgEmulDigis:MPCSORTED
+  untracked InputTag trackProducer = l1CscTfTrackEmulDigis:
 #  untracked InputTag trackProducer = null:
-  untracked InputTag lctProducer   = csctfunpacker:
-  untracked InputTag trackProducer = csctfunpacker:
-  untracked InputTag statusProducer= csctfunpacker:
+#  untracked InputTag lctProducer   = csctfunpacker:
+#  untracked InputTag trackProducer = csctfunpacker:
+#  untracked InputTag statusProducer= csctfunpacker:
 
   using CSCCommonTrigger
 # the above "using" statement is equivalent to settings below:
