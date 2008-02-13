@@ -1,17 +1,22 @@
 include "L1Trigger/CSCCommonTrigger/data/CSCCommonTrigger.cfi"
 
 module csctfunpacker = CSCTFUnpacker {
+  using CSCCommonTrigger
+# the above "using" statement is equivalent to setting of LCT time window below:
+#   untracked(?) int32 MinBX = 3
+#   untracked(?) int32 MaxBX = 9
+
   # Specify label of the module which produces raw CSCTF data
   untracked InputTag producer  = source:
 
+  # Mapping file (default one-to-one applied if empty):
+  string mappingFile = ""
+
   # Set all values to 0 if you trust hardware settings
   # Keep in mind that +Z (positive endcap) has sectors 1-6 and -Z (negative endcap) 7-12
-  untracked vint32 slot2sector = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-#  untracked vint32 slot2sector = {0,0,0,0,0,0,1,2,3,4,5,6,0,0,0,0,7,8,9,10,11,12}
+  vint32 slot2sector = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 
-  using CSCCommonTrigger
-# the above "using" statement is equivalent to settings below:
-#   untracked int32 MinBX = 3
-#   untracked int32 MaxBX = 9
+  # Agreement in CSC community to shift and reverse ME-1 strips as opposed to hardware
+  bool swapME1strips = true
 }
 
