@@ -1,6 +1,6 @@
 include "L1Trigger/CSCCommonTrigger/data/CSCCommonTrigger.cfi"
 
-module cscTrackFinderDigis = CSCTFUnpacker {
+module csctfunpacker = CSCTFUnpacker {
   using CSCCommonTrigger
 # the above "using" statement is equivalent to setting of LCT time window below:
 #   untracked(?) int32 MinBX = 3
