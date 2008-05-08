@@ -11,8 +11,8 @@ module csctfpacker = CSCTFPacker {
   int32  activeSectors   = 0x0FFF
   untracked string outputFile      = ""
   untracked bool   putBufferToEvent= true
-  untracked InputTag lctProducer   = cscTriggerPrimitiveDigis:MPCSORTED
-  untracked InputTag trackProducer = csctfTrackDigis:
+  untracked InputTag lctProducer   = simCscTriggerPrimitiveDigis:MPCSORTED
+  untracked InputTag trackProducer = simCsctfTrackDigis:
 
   # Agreement in CSC community to shift and reverse ME-1 strips as opposed to hardware
   bool swapME1strips = true
