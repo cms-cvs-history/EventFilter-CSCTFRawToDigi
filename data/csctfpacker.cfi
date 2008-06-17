@@ -15,5 +15,5 @@ module csctfpacker = CSCTFPacker {
   untracked InputTag trackProducer = simCsctfTrackDigis:
 
   # Agreement in CSC community to shift and reverse ME-1 strips as opposed to hardware
-  bool swapME1strips = true
+  bool swapME1strips = false
 }

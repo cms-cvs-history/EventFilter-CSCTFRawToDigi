@@ -17,6 +17,6 @@ module csctfunpacker = CSCTFUnpacker {
   vint32 slot2sector = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 
   # Agreement in CSC community to shift and reverse ME-1 strips as opposed to hardware
-  bool swapME1strips = true
+  bool swapME1strips = false
 }
 
