@@ -29,10 +29,10 @@ CSCTFPacker::CSCTFPacker(const edm::ParameterSet &conf):edm::EDProducer(){
 	activeSectors   = conf.getParameter<int> ("activeSectors");
 
 	// Configuration that controls CMSSW specific stuff
-	putBufferToEvent       = conf.getUntrackedParameter<bool>("putBufferToEvent");
+	putBufferToEvent       = conf.getParameter<bool>("putBufferToEvent");
 	std::string outputFile = conf.getUntrackedParameter<std::string>("outputFile","");
-	lctProducer            = conf.getUntrackedParameter<edm::InputTag>("lctProducer",edm::InputTag("csctfunpacker"));
-	trackProducer          = conf.getUntrackedParameter<edm::InputTag>("trackProducer",edm::InputTag("csctfunpacker"));
+	lctProducer            = conf.getParameter<edm::InputTag>("lctProducer");
+	trackProducer          = conf.getParameter<edm::InputTag>("trackProducer");
 
 	// Swap: if(swapME1strips && me1b && !zplus) strip = 65 - strip; // 1-64 -> 64-1 :
 	swapME1strips = conf.getParameter<bool>("swapME1strips");
